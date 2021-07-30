@@ -60,7 +60,7 @@ function setup() {
   polygon = Bodies.circle(50,200,20);
   World.add(world,polygon);
   
-  SlingShot = new Slingshot(this.polygon,{x:100,y:200});
+  slingShot = new SlingShot(this.polygon,{x:100,y:200});
 
 }
 function draw() {
@@ -125,4 +125,9 @@ function mouseReleased(){
 }
 function keyPressed(){
 //write code for extra chance of the player
+
+if(keyCode === 32){
+
+slingShot.attach(polygon);
+}
 }
